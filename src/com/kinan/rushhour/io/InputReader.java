@@ -63,7 +63,7 @@ public class InputReader {
                 }
 
                 rawBoardLines.add(line);
-                
+
                 for (int j = 0; j < line.length(); j++) {
                     char c = line.charAt(j);
                     if (c == goalPiece) {
@@ -71,7 +71,7 @@ public class InputReader {
                             throw new Error("Multiple goal positions ('K') found.");
                         }
 
-                        if (i == 0 && j < B && rawBoardLines.size() == 7) { // TOP border
+                        if (i == 0 && j < B) { // TOP border
                             goalPlacement = GoalPlacement.TOP;
                             goalIndex = j;
                             isGoalFound = true;
@@ -96,6 +96,10 @@ public class InputReader {
                         }
                     }
                 }
+            }
+
+            if (goalPlacement == GoalPlacement.TOP && rawBoardLines.size() != 7) {
+                goalPlacement = GoalPlacement.LEFT;
             }
 
             if (!isGoalFound) {
@@ -186,6 +190,7 @@ public class InputReader {
             if (!foundPrimary && ids.length > 0) {
                 throw new Error("No Primary Piece ('P') detected!");
             }
+            checkPrimaryPieceAlignment();
         } catch (IOException e) {
             throw new Error("Error reading file: " + e.getMessage());
         }
@@ -200,6 +205,48 @@ public class InputReader {
             return number;
         } catch (NumberFormatException e) {
             throw new Error(errorMessage + " is not a valid integer.");
+        }
+    }
+
+    private void checkPrimaryPieceAlignment() {
+        if (!isGoalFound || ids == null) return;
+
+        List<int[]> primaryCoords = null;
+        for (int i = 0; i < ids.length; i++) {
+            if (ids[i] == primaryPiece) {
+                primaryCoords = puzzlePieces.get(i);
+                break;
+            }
+        }
+
+        if (primaryCoords == null || primaryCoords.isEmpty()) {
+            throw new Error("Primary piece '" + primaryPiece + "' has no coordinates");
+        }
+
+        boolean isAligned = true;
+        switch (goalPlacement) {
+            case LEFT:
+            case RIGHT:
+                for (int[] coord : primaryCoords) {
+                    if (coord[1] != goalIndex) {
+                        isAligned = false;
+                        break;
+                    }
+                }
+                break;
+            case TOP:
+            case BOTTOM:
+                for (int[] coord : primaryCoords) {
+                    if (coord[0] != goalIndex) {
+                        isAligned = false;
+                        break;
+                    }
+                }
+                break;
+        }
+
+        if (!isAligned) {
+            throw new Error("Primary piece '" + primaryPiece + "' is not aligned with goal position");
         }
     }
 }
