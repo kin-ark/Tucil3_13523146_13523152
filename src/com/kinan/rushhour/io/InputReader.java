@@ -5,6 +5,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+enum GoalPlacement {
+    TOP,
+    LEFT,
+    RIGHT,
+    BOTTOM
+}
+
 public class InputReader {
     public int A, B, N;
     public char[][] board;
@@ -14,7 +21,8 @@ public class InputReader {
     public char[] ids;
 
     private List<String> rawBoardLines;
-    public int[] goalPosition = null;
+    public GoalPlacement goalPlacement;
+    public int goalIndex;
     private boolean isGoalFound;
     private int startA, endA, startB, endB;
 
@@ -22,7 +30,6 @@ public class InputReader {
         puzzlePieces = new ArrayList<>();
         rawBoardLines = new ArrayList<>();
         readInputFile(fileName);
-
     }
 
     private void readInputFile(String fileName) {
@@ -44,9 +51,10 @@ public class InputReader {
             // Scan for goal position while get the raw board lines
             for (int i = 0; i <= A; i++) {
                 String line = br.readLine();
-                if (line == null)
-                {
-                    if (!isGoalFound && i != A) {throw new Error("Unexpected end of file when reading board.");}
+                if (line == null) {
+                    if (!isGoalFound && i != A) {
+                        throw new Error("Unexpected end of file when reading board.");
+                    }
                     break;
                 } 
 
@@ -59,49 +67,64 @@ public class InputReader {
                 for (int j = 0; j < line.length(); j++) {
                     char c = line.charAt(j);
                     if (c == goalPiece) {
-                        if (goalPosition != null) {
+                        if (isGoalFound) {
                             throw new Error("Multiple goal positions ('K') found.");
                         }
 
-                        boolean outsideLeft = (i < A && j == 0);
-                        boolean outsideTop = (i == 0 && j < B);
-                        boolean outsideRight = (j == B && i < A);
-                        boolean outsideBottom = (i == A && j < B);
-
-                        if (outsideLeft || outsideTop || outsideRight || outsideBottom) {
-                            goalPosition = new int[]{j, i};
+                        if (i == 0 && j < B && rawBoardLines.size() == 7) { // TOP border
+                            goalPlacement = GoalPlacement.TOP;
+                            goalIndex = j;
                             isGoalFound = true;
-                        } else {
+                        } 
+                        else if (j == 0 && i < A) { // LEFT border
+                            goalPlacement = GoalPlacement.LEFT;
+                            goalIndex = i;
+                            isGoalFound = true;
+                        }
+                        else if (j == B && i < A) { // RIGHT border
+                            goalPlacement = GoalPlacement.RIGHT;
+                            goalIndex = i;
+                            isGoalFound = true;
+                        }
+                        else if (i == A && j < B) { // BOTTOM border
+                            goalPlacement = GoalPlacement.BOTTOM;
+                            goalIndex = j;
+                            isGoalFound = true;
+                        }
+                        else {
                             throw new Error("Goal piece ('K') must be on the border.");
                         }
                     }
                 }
             }
 
-            if (goalPosition == null) {
+            if (!isGoalFound) {
                 throw new Error("No goal position ('K') found.");
             }
-            else
-            {
-                if (goalPosition[0] == 0 && goalPosition[1] < A && rawBoardLines.size() == A) { // outsideLeft
+
+            switch (goalPlacement) {
+                case LEFT:
                     startA = 0;
                     endA = A;
                     startB = 1;
                     endB = B + 1;
-                } else if (goalPosition[0] < B && goalPosition[1] == 0 && rawBoardLines.size() == A + 1) { // outsideTop
+                    break;
+                case TOP:
                     startA = 1;
                     endA = A + 1;
                     startB = 0;
                     endB = B;
-                } else { // outsideRight & outsideBottom
+                    break;
+                case RIGHT:
+                case BOTTOM:
+                default:
                     startA = 0;
                     endA = A;
                     startB = 0;
                     endB = B;
-                }
+                    break;
             }
             
-            // Parse the rawBoardLines to board
             board = new char[A][B];
             for (int i = 0; i < A; i++) {
                 for (int j = 0; j < B; j++) {
@@ -121,10 +144,17 @@ public class InputReader {
                     int boardRow = i;
                     int boardCol = j;
 
-                    if (goalPosition[0] == 0 && goalPosition[1] < A && rawBoardLines.size() == A) { // outsideLeft
-                        boardCol = j - 1;
-                    } else if (goalPosition[0] < B && goalPosition[1] == 0 && rawBoardLines.size() == A + 1) { // outsideTop
-                        boardRow = i - 1;
+                    switch (goalPlacement) {
+                        case LEFT:
+                            boardCol = j - 1;
+                            break;
+                        case TOP:
+                            boardRow = i - 1;
+                            break;
+                        case RIGHT:
+                        case BOTTOM:
+                        default:
+                            break;
                     }
 
                     if (boardRow < 0 || boardRow >= A || boardCol < 0 || boardCol >= B) continue;
@@ -146,7 +176,6 @@ public class InputReader {
                 idx++;
             }
 
-            // Set primaryPiece = 'P' if present, otherwise use first
             boolean foundPrimary = false;
             for (char id : ids) {
                 if (id == primaryPiece) {
