@@ -41,13 +41,13 @@ import rush_hour.solver.GameSolver;
 
 public class TesGUI extends Application {
     // Color palette
-    private static final Color PRIMARY_COLOR = Color.web("#3b59b6");
-    private static final Color PRIMARY_LIGHT = Color.web("#5977d4");
-    private static final Color BACKGROUND_COLOR = Color.web("#f5f5f7");
-    private static final Color TEXT_COLOR = Color.web("#333333");
-    private static final Color EMPTY_CELL = Color.web("#e0e0e0");
-    private static final Color PLAYER_CELL = Color.web("#ff7675");
-    private static final Color OTHER_CELL = Color.web("#74b9ff");
+    private static final Color BACKGROUND_COLOR = Color.web("#2E3440");
+    private static final Color PRIMARY_COLOR = Color.web("#5E81AC");
+    private static final Color PRIMARY_LIGHT = Color.web("#88C0D0");
+    private static final Color TEXT_COLOR = Color.web("#ECEFF4");
+    private static final Color EMPTY_CELL = Color.web("#3B4252");
+    private static final Color PLAYER_CELL = Color.web("#A3BE8C");
+    private static final Color OTHER_CELL = Color.web("#BF616A");
 
     private Stage primaryStage;
     private File selectedFile;
@@ -268,8 +268,8 @@ public class TesGUI extends Application {
         StackPane boardContainer = new StackPane();
         boardContainer.setPadding(new Insets(20));
         boardContainer.setStyle(
-            "-fx-background-color: white;" +
-            "-fx-border-color: " + toHexString(PRIMARY_COLOR) + ";" +
+            "-fx-background-color: " + toHexString(PRIMARY_COLOR) + ";" +
+            "-fx-border-color: " + toHexString(PRIMARY_LIGHT) + ";" +
             "-fx-border-width: 2;" +
             "-fx-border-radius: 5;"
         );
@@ -467,7 +467,7 @@ public class TesGUI extends Application {
 
                 StackPane cellPane = new StackPane(cellLabel);
                 cellPane.setStyle(
-                    "-fx-border-color: #555555;" +
+                    "-fx-border-color: " + toHexString(PRIMARY_LIGHT) + ";" +
                     "-fx-border-width: 1;" +
                     "-fx-border-radius: 3;"
                 );
@@ -496,7 +496,7 @@ public class TesGUI extends Application {
         dialogPane.setStyle("-fx-background-color: " + toHexString(BACKGROUND_COLOR) + ";");
         dialogPane.lookup(".label.content").setStyle("-fx-font-size: 14px; -fx-font-family: 'Poppins';");
         dialogPane.lookup(".header-panel").setStyle("-fx-background-color: " + toHexString(PRIMARY_COLOR) + ";");
-        dialogPane.lookup(".header-panel .label").setStyle("-fx-text-fill: white; -fx-font-size: 16px; -fx-font-family: 'Poppins';");
+        dialogPane.lookup(".header-panel .label").setStyle("-fx-text-fill: " + toHexString(TEXT_COLOR) + ";" + " -fx-font-size: 16px; -fx-font-family: 'Poppins';");
 
         alert.showAndWait();
         showMainMenu();
@@ -508,7 +508,7 @@ public class TesGUI extends Application {
 
         String baseStyle = 
             "-fx-background-color: " + toHexString(PRIMARY_COLOR) + ";" +
-            "-fx-text-fill: white;" +
+            "-fx-text-fill: " + toHexString(TEXT_COLOR) + ";" +
             "-fx-background-radius: 5;" +
             "-fx-cursor: hand;";
         
@@ -517,7 +517,7 @@ public class TesGUI extends Application {
         button.setOnMouseEntered(e -> 
             button.setStyle(
                 "-fx-background-color: " + toHexString(PRIMARY_LIGHT) + ";" +
-                "-fx-text-fill: white;" +
+                "-fx-text-fill: " + toHexString(TEXT_COLOR) + ";" +
                 "-fx-background-radius: 5;" +
                 "-fx-cursor: hand;"
             )
