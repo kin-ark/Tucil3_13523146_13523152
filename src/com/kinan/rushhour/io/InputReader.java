@@ -1,16 +1,10 @@
 package com.kinan.rushhour.io;
 
+import com.kinan.rushhour.model.GameEnums;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
-
-enum GoalPlacement {
-    TOP,
-    LEFT,
-    RIGHT,
-    BOTTOM
-}
 
 public class InputReader {
     public int A, B, N;
@@ -21,7 +15,7 @@ public class InputReader {
     public char[] ids;
 
     private List<String> rawBoardLines;
-    public GoalPlacement goalPlacement;
+    public GameEnums.GoalPlacement goalPlacement;
     public int goalIndex;
     private boolean isGoalFound;
     private int startA, endA, startB, endB;
@@ -72,22 +66,22 @@ public class InputReader {
                         }
 
                         if (i == 0 && j < B) { // TOP border
-                            goalPlacement = GoalPlacement.TOP;
+                            goalPlacement = GameEnums.GoalPlacement.TOP;
                             goalIndex = j;
                             isGoalFound = true;
                         } 
                         else if (j == 0 && i < A) { // LEFT border
-                            goalPlacement = GoalPlacement.LEFT;
+                            goalPlacement = GameEnums.GoalPlacement.LEFT;
                             goalIndex = i;
                             isGoalFound = true;
                         }
                         else if (j == B && i < A) { // RIGHT border
-                            goalPlacement = GoalPlacement.RIGHT;
+                            goalPlacement = GameEnums.GoalPlacement.RIGHT;
                             goalIndex = i;
                             isGoalFound = true;
                         }
                         else if (i == A && j < B) { // BOTTOM border
-                            goalPlacement = GoalPlacement.BOTTOM;
+                            goalPlacement = GameEnums.GoalPlacement.BOTTOM;
                             goalIndex = j;
                             isGoalFound = true;
                         }
@@ -98,8 +92,8 @@ public class InputReader {
                 }
             }
 
-            if (goalPlacement == GoalPlacement.TOP && rawBoardLines.size() != 7) {
-                goalPlacement = GoalPlacement.LEFT;
+            if (goalPlacement == GameEnums.GoalPlacement.TOP && rawBoardLines.size() != A + 1) {
+                goalPlacement = GameEnums.GoalPlacement.LEFT;
             }
 
             if (!isGoalFound) {
@@ -227,6 +221,7 @@ public class InputReader {
         switch (goalPlacement) {
             case LEFT:
             case RIGHT:
+                // System.err.println("Goal Placement: " + goalPlacement + ", Index: " + goalIndex);
                 for (int[] coord : primaryCoords) {
                     if (coord[1] != goalIndex) {
                         isAligned = false;
@@ -236,6 +231,7 @@ public class InputReader {
                 break;
             case TOP:
             case BOTTOM:
+                // System.err.println("Goal Placement: " + goalPlacement + ", Index: " + goalIndex);
                 for (int[] coord : primaryCoords) {
                     if (coord[0] != goalIndex) {
                         isAligned = false;
