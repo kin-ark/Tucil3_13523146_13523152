@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("org.openjfx.javafxplugin")
 }
 
 repositories {
@@ -37,6 +38,11 @@ application {
     mainClass = "rush_hour.App"
 }
 
+javafx {
+    version = "21"
+    modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics")
+}
+
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
@@ -48,4 +54,8 @@ tasks.withType<JavaCompile> {
 
 tasks.withType<Jar> {
     destinationDirectory.set(file("${rootProject.projectDir}/bin/jar"))
+}
+
+tasks.named<JavaExec>("run") {
+    classpath = files("${rootProject.projectDir}/bin/classes") + sourceSets["main"].runtimeClasspath
 }

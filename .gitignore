@@ -6,3 +6,6 @@ build
 
 # Ignore IDE settings
 .vscode
+
+# Ignore compiled classes and jar files
+bin
