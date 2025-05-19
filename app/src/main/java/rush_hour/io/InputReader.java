@@ -1,6 +1,6 @@
-package com.kinan.rushhour.io;
+package rush_hour.io;
 
-import com.kinan.rushhour.model.GameEnums;
+import rush_hour.model.GameEnums;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

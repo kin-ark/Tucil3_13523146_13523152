@@ -1,4 +1,4 @@
-package com.kinan.rushhour.model;
+package rush_hour.model;
 
 import java.util.*;
 

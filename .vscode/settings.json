@@ -1,0 +1,7 @@
+{
+	"java.project.sourcePaths": [
+		"${workspaceFolder}/src/",
+		"app/src/main/java"
+	],
+	"java.project.referencedLibraries": []
+}

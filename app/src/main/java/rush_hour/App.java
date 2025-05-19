@@ -1,6 +1,6 @@
-package com.kinan.rushhour;
+package rush_hour;
 
-import com.kinan.rushhour.gui.GameSolverGUI;
+import rush_hour.gui.GameSolverGUI;
 import javax.swing.SwingUtilities;
 
 public class App {

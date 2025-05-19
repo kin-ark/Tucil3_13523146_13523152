@@ -1,6 +1,6 @@
-package com.kinan.rushhour.solver;
+package rush_hour.solver;
 
-import com.kinan.rushhour.model.*;
+import rush_hour.model.*;
 import java.util.*;
 
 public class GameSolver {

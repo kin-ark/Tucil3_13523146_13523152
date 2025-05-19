@@ -1,10 +1,10 @@
-package com.kinan.rushhour.gui;
+package rush_hour.gui;
 
-import com.kinan.rushhour.io.InputReader;
-import com.kinan.rushhour.model.GameBoard;
-import com.kinan.rushhour.model.GamePiece;
-import com.kinan.rushhour.model.GameState;
-import com.kinan.rushhour.solver.GameSolver;
+import rush_hour.io.InputReader;
+import rush_hour.model.GameBoard;
+import rush_hour.model.GamePiece;
+import rush_hour.model.GameState;
+import rush_hour.solver.GameSolver;
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
