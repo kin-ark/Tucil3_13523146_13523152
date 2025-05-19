@@ -41,3 +41,11 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.withType<JavaCompile> {
+    destinationDirectory.set(file("${rootProject.projectDir}/bin/classes"))
+}
+
+tasks.withType<Jar> {
+    destinationDirectory.set(file("${rootProject.projectDir}/bin/jar"))
+}
