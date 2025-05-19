@@ -475,7 +475,7 @@ public class GameSolverGUI extends Application {
 
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
-        alert.setHeaderText("Something is Wrong!");
+        alert.setHeaderText("Something is wrong with the configuration file!");
         alert.setContentText(message);
 
         DialogPane dialogPane = alert.getDialogPane();
