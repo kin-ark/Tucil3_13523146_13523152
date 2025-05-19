@@ -66,8 +66,8 @@ public class TesGUI extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Rush Hour Solver");
-        primaryStage.setWidth(700);
-        primaryStage.setHeight(650);
+        primaryStage.setWidth(800);
+        primaryStage.setHeight(600);
 
         showMainMenu();
 
@@ -85,7 +85,7 @@ public class TesGUI extends Application {
         titleLabel.setTextFill(PRIMARY_COLOR);
 
         // Ini kalo mau ada deskripsi aja sih
-        Label descLabel = new Label("Cobain dah bang, keren banget anjir");
+        Label descLabel = new Label("Rush Hour Solver with Pathfinding Algorithm");
         descLabel.setFont(Font.font("Poppins", FontWeight.NORMAL, 14));
         descLabel.setTextFill(TEXT_COLOR);
 
