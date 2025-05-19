@@ -1,10 +1,9 @@
 package rush_hour;
 
-import rush_hour.gui.TesGUI;
+import rush_hour.gui.GameSolverGUI;
 
 public class App {
     public static void main(String[] args) {
-        // SwingUtilities.invokeLater(GameSolverGUI::new);
-        TesGUI.launchApp(args);
+        GameSolverGUI.launchApp(args);
     }
 }
