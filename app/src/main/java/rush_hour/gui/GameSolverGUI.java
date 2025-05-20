@@ -101,7 +101,7 @@ public class GameSolverGUI extends Application {
         algoLabel.setTextFill(TEXT_COLOR);
 
         algorithmComboBox = new ComboBox<>();
-        algorithmComboBox.getItems().addAll("UCS", "Greedy Best First", "A*");
+        algorithmComboBox.getItems().addAll("UCS", "Greedy Best First", "A*", "IDA*");
         algorithmComboBox.setValue("A*");
         algorithmComboBox.setStyle("-fx-font-family: 'Poppins'; -fx-font-size: 14px;");
         algorithmComboBox.setPrefWidth(200);

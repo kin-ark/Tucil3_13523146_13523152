@@ -3,6 +3,7 @@ package rush_hour.solver;
 import java.util.List;
 
 import rush_hour.model.GameState;
+import rush_hour.solver.algorithm.IDAStarSearch;
 import rush_hour.solver.algorithm.SearchAlgorithm;
 import rush_hour.solver.algorithm.StandardSearch;
 import rush_hour.solver.comparator.AStarComparator;
@@ -30,6 +31,7 @@ public class GameSolver {
             case "UCS" -> new StandardSearch(new UCSComparator());
             case "Greedy Best First" -> new StandardSearch(new GreedyComparator(heuristic));
             case "A*" -> new StandardSearch(new AStarComparator(heuristic));
+            case "IDA*" -> new IDAStarSearch(heuristic);
             default -> throw new IllegalArgumentException("Unknown algorithm: " + algorithmName);
         };
     }
