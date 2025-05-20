@@ -1,52 +1,49 @@
 package rush_hour.solver;
 
-import rush_hour.model.*;
-import java.util.*;
+import java.util.List;
+
+import rush_hour.model.GameState;
+import rush_hour.solver.algorithm.SearchAlgorithm;
+import rush_hour.solver.algorithm.StandardSearch;
+import rush_hour.solver.comparator.AStarComparator;
+import rush_hour.solver.comparator.GreedyComparator;
+import rush_hour.solver.comparator.UCSComparator;
+import rush_hour.solver.heuristic.HeuristicFunction;
+import rush_hour.solver.heuristic.StandardHeuristic;
 
 public class GameSolver {
-    public static int turn = 0;
-
-    public static List<GameState> solve(GameState initialState, GameState.Strategy strategy) {
-        GameState.setComparisonStrategy(strategy);
-
-        PriorityQueue<GameState> prioQ = new PriorityQueue<>();
-        Set<String> visited = new HashSet<>();
-
-        prioQ.add(initialState);
-
-        while (!prioQ.isEmpty()) {
-            turn++;
-            GameState current = prioQ.poll();
-
-            if (visited.contains(current.getBoard().toString())) {
-                continue;
-            }
-
-            visited.add(current.getBoard().toString());
-
-            if (current.isGoal()) {
-                // System.err.println(current.getBoard());
-                return reconstructPath(current);
-            }
-
-            for (GameState neighbor : current.generateSuccessors()) {
-                if (!visited.contains(neighbor.getBoard().toString())) {
-                    prioQ.add(neighbor);
-                }
-            }
-        }
-
-        return Collections.emptyList();
+    public static SearchAlgorithm createSolver(String algorithmName) {
+        HeuristicFunction heuristic = new StandardHeuristic();
+        
+        return switch (algorithmName) {
+            case "UCS" -> new StandardSearch(new UCSComparator());
+            case "Greedy Best First" -> new StandardSearch(new GreedyComparator(heuristic));
+            case "A*" -> new StandardSearch(new AStarComparator(heuristic));
+            default -> throw new IllegalArgumentException("Unknown algorithm: " + algorithmName);
+        };
     }
 
-    private static List<GameState> reconstructPath(GameState goalState) {
-        List<GameState> path = new ArrayList<>();
-        GameState current = goalState;
-        while (current != null) {
-            path.add(current);
-            current = current.getParent();
+    public static SolverResult solve(GameState initialState, String algorithmName) {
+        SearchAlgorithm algorithm = createSolver(algorithmName);
+        List<GameState> path = algorithm.solve(initialState);
+        return new SolverResult(path, algorithm.getNodesExplored());
+    }
+
+    public static class SolverResult {
+        private final List<GameState> path;
+        private final int nodesExplored;
+
+        public SolverResult(List<GameState> path, int nodesExplored) {
+            this.path = path;
+            this.nodesExplored = nodesExplored;
         }
-        Collections.reverse(path);
-        return path;
+
+        public List<GameState> getPath() {
+            return path;
+        }
+
+        public int getNodesExplored() {
+            return nodesExplored;
+        }
     }
 }

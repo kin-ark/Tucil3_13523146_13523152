@@ -56,6 +56,7 @@ public class GameSolverGUI extends Application {
     private List<GameState> solutionPath;
     private long solveTime;
     private int rows, cols;
+    private int nodesExplored = 0;
     private Label loadingLabel;
     private Timeline loadingAnimation;
     private Timeline solutionAnimation;
@@ -202,11 +203,6 @@ public class GameSolverGUI extends Application {
             cols = reader.B;
 
             String selectedAlgorithm = algorithmComboBox.getValue();
-            switch (selectedAlgorithm) {
-                case "Greedy Best First" -> GameState.setComparisonStrategy(GameState.Strategy.GREEDY);
-                case "A*" -> GameState.setComparisonStrategy(GameState.Strategy.ASTAR);
-                default -> GameState.setComparisonStrategy(GameState.Strategy.UCS);
-            }
 
             List<GamePiece> pieces = new ArrayList<>();
             for (int i = 0; i < reader.ids.length; i++) {
@@ -219,16 +215,74 @@ public class GameSolverGUI extends Application {
             GameState initialState = new GameState(initialBoard, pieces, null, "Start");
 
             long startTime = System.currentTimeMillis();
-            solutionPath = GameSolver.solve(initialState, GameState.comparisonStrategy);
+            GameSolver.SolverResult result = GameSolver.solve(initialState, selectedAlgorithm);
+            solutionPath = result.getPath();
             long endTime = System.currentTimeMillis();
             solveTime = endTime - startTime;
 
-            Platform.runLater(this::showSolutionScreen);
+            nodesExplored = result.getNodesExplored();
+
+            Platform.runLater(() -> {
+                if (solutionPath.isEmpty()) {
+                    showNoSolutionScreen();
+                } else {
+                    showSolutionScreen();
+                }
+            });
         } catch (Exception e) {
             Platform.runLater(() -> showErrorDialog("Exception: " + e.getMessage()));
         } catch (Error e) {
             Platform.runLater(() -> showErrorDialog("Error: " + e.getMessage()));
         }
+    }
+
+    private void showNoSolutionScreen() {
+        if (loadingAnimation != null) {
+            loadingAnimation.stop();
+        }
+
+        BorderPane root = new BorderPane();
+        root.setPadding(new Insets(30));
+        root.setStyle("-fx-background-color: " + toHexString(BACKGROUND_COLOR) + ";");
+
+        VBox centerBox = new VBox(20);
+        centerBox.setAlignment(Pos.CENTER);
+
+        Label resultLabel = new Label("No Solution Found!");
+        resultLabel.setFont(Font.font("Poppins", FontWeight.BOLD, 24));
+        resultLabel.setTextFill(PRIMARY_COLOR);
+
+        Label explainLabel = new Label("This puzzle has no valid solution.");
+        explainLabel.setFont(Font.font("Poppins", FontWeight.MEDIUM, 16));
+        explainLabel.setTextFill(TEXT_COLOR);
+
+        Label nodesExploredLabel = new Label("Nodes explored: " + nodesExplored);
+        nodesExploredLabel.setFont(Font.font("Poppins", FontWeight.MEDIUM, 14));
+        nodesExploredLabel.setTextFill(TEXT_COLOR);
+
+        Label timeLabel = new Label("Time spent: " + solveTime + " ms");
+        timeLabel.setFont(Font.font("Poppins", FontWeight.MEDIUM, 14));
+        timeLabel.setTextFill(TEXT_COLOR);
+
+        Button backButton = new Button("Back to Menu");
+        styleButton(backButton);
+        backButton.setOnAction(e -> {
+            showMainMenu();
+            nodesExplored = 0;
+        });
+
+        centerBox.getChildren().addAll(
+            resultLabel, 
+            explainLabel,
+            nodesExploredLabel,
+            timeLabel,
+            backButton
+        );
+
+        root.setCenter(centerBox);
+
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
     }
 
     private void showSolutionScreen() {
@@ -254,7 +308,7 @@ public class GameSolverGUI extends Application {
         timeLabel.setFont(Font.font("Poppins", FontWeight.MEDIUM, 14));
         timeLabel.setTextFill(TEXT_COLOR);
 
-        Label nodesLabel = new Label("Nodes: " + GameSolver.turn);
+        Label nodesLabel = new Label("Nodes: " + nodesExplored);
         nodesLabel.setFont(Font.font("Poppins", FontWeight.MEDIUM, 14));
         nodesLabel.setTextFill(TEXT_COLOR);
 
@@ -372,7 +426,7 @@ public class GameSolverGUI extends Application {
         backButton.setOnAction(e -> {
             stopAnimation();
             showMainMenu();
-            GameSolver.turn = 0;
+            nodesExplored = 0;
         });
 
         HBox navigationBox = new HBox(10, prevButton, playPauseButton, nextButton);
