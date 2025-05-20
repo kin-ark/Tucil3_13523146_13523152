@@ -52,6 +52,7 @@ public class GameSolverGUI extends Application {
     private Stage primaryStage;
     private File selectedFile;
     private ComboBox<String> algorithmComboBox;
+    private ComboBox<String> heuristicComboBox;
     private GridPane boardDisplay;
     private List<GameState> solutionPath;
     private long solveTime;
@@ -100,18 +101,38 @@ public class GameSolverGUI extends Application {
 
         algorithmComboBox = new ComboBox<>();
         algorithmComboBox.getItems().addAll("UCS", "Greedy Best First", "A*");
-        algorithmComboBox.setValue("UCS");
+        algorithmComboBox.setValue("A*");
         algorithmComboBox.setStyle("-fx-font-family: 'Poppins'; -fx-font-size: 14px;");
         algorithmComboBox.setPrefWidth(200);
 
         algorithmBox.getChildren().addAll(algoLabel, algorithmComboBox);
+
+        HBox heuristicBox = new HBox(15);
+        heuristicBox.setAlignment(Pos.CENTER);
+
+        Label heuristicLabel = new Label("Heuristic:");
+        heuristicLabel.setFont(Font.font("Poppins", FontWeight.MEDIUM, 16));
+        heuristicLabel.setTextFill(TEXT_COLOR);
+
+        heuristicComboBox = new ComboBox<>();
+        heuristicComboBox.getItems().addAll("Combined", "Distance", "Blocker Count");
+        heuristicComboBox.setValue("Combined");
+        heuristicComboBox.setStyle("-fx-font-family: 'Poppins'; -fx-font-size: 14px;");
+        heuristicComboBox.setPrefWidth(200);
+
+        algorithmComboBox.setOnAction(e -> {
+            String selected = algorithmComboBox.getValue();
+            heuristicBox.setVisible(!"UCS".equals(selected));
+        });
+
+        heuristicBox.getChildren().addAll(heuristicLabel, heuristicComboBox);
 
         // File selection button
         Button selectFileButton = new Button("Select Puzzle File");
         styleButton(selectFileButton);
         selectFileButton.setOnAction(e -> openFileChooser());
 
-        root.getChildren().addAll(titleLabel, descLabel, algorithmBox, selectFileButton);
+        root.getChildren().addAll(titleLabel, descLabel, algorithmBox, heuristicBox, selectFileButton);
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -203,6 +224,7 @@ public class GameSolverGUI extends Application {
             cols = reader.B;
 
             String selectedAlgorithm = algorithmComboBox.getValue();
+            String selectedHeuristic = heuristicComboBox.getValue();
 
             List<GamePiece> pieces = new ArrayList<>();
             for (int i = 0; i < reader.ids.length; i++) {
@@ -215,7 +237,7 @@ public class GameSolverGUI extends Application {
             GameState initialState = new GameState(initialBoard, pieces, null, "Start");
 
             long startTime = System.currentTimeMillis();
-            GameSolver.SolverResult result = GameSolver.solve(initialState, selectedAlgorithm);
+            GameSolver.SolverResult result = GameSolver.solve(initialState, selectedAlgorithm, selectedHeuristic);
             solutionPath = result.getPath();
             long endTime = System.currentTimeMillis();
             solveTime = endTime - startTime;

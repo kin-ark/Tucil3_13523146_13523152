@@ -47,7 +47,7 @@ public final class GamePiece {
             int col = positions.get(0)[0];
             for (int[] pos : positions) {
                 if (pos[0] != col) {
-                    throw new IllegalArgumentException("All positions must be in the same row for horizontal pieces");
+                    throw new IllegalArgumentException("All positions must be in the same column for vertical pieces");
                 }
             }
         }

@@ -8,12 +8,23 @@ import rush_hour.solver.algorithm.StandardSearch;
 import rush_hour.solver.comparator.AStarComparator;
 import rush_hour.solver.comparator.GreedyComparator;
 import rush_hour.solver.comparator.UCSComparator;
+import rush_hour.solver.heuristic.BlockerHeuristic;
+import rush_hour.solver.heuristic.CombinedHeuristic;
+import rush_hour.solver.heuristic.DistanceHeuristic;
 import rush_hour.solver.heuristic.HeuristicFunction;
-import rush_hour.solver.heuristic.StandardHeuristic;
 
 public class GameSolver {
-    public static SearchAlgorithm createSolver(String algorithmName) {
-        HeuristicFunction heuristic = new StandardHeuristic();
+    public static HeuristicFunction createHeuristic(String heuristicName) {
+        return switch (heuristicName) {
+            case "Distance" -> new DistanceHeuristic();
+            case "Blocker Count" -> new BlockerHeuristic();
+            case "Combined" -> new CombinedHeuristic();
+            default -> new CombinedHeuristic(); // Default to combined
+        };
+    }
+
+    public static SearchAlgorithm createSolver(String algorithmName, String heuristicName) {
+        HeuristicFunction heuristic = createHeuristic(heuristicName);
         
         return switch (algorithmName) {
             case "UCS" -> new StandardSearch(new UCSComparator());
@@ -23,8 +34,8 @@ public class GameSolver {
         };
     }
 
-    public static SolverResult solve(GameState initialState, String algorithmName) {
-        SearchAlgorithm algorithm = createSolver(algorithmName);
+    public static SolverResult solve(GameState initialState, String algorithmName, String heuristicName) {
+        SearchAlgorithm algorithm = createSolver(algorithmName, heuristicName);
         List<GameState> path = algorithm.solve(initialState);
         return new SolverResult(path, algorithm.getNodesExplored());
     }

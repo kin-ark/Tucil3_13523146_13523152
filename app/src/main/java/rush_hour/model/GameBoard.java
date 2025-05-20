@@ -41,18 +41,18 @@ public class GameBoard {
             int col = pos[0];
             int row = pos[1];
             switch (goalPlacement) {
-                case LEFT:
+                case LEFT -> {
                     if (col == 0 && row == goalIndex) return true;
-                    break;
-                case RIGHT:
+                }
+                case RIGHT -> {
                     if (col == cols - 1 && row == goalIndex) return true;
-                    break;
-                case TOP:
+                }
+                case TOP -> {
                     if (col == goalIndex && row == 0) return true;
-                    break;
-                case BOTTOM:
+                }
+                case BOTTOM -> {
                     if (col == goalIndex && row == rows - 1) return true;
-                    break;
+                }
             }
         }
         return false;
