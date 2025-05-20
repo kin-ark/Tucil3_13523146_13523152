@@ -1,10 +1,14 @@
 package rush_hour.io;
 
-import rush_hour.model.GameEnums;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import rush_hour.model.GameEnums;
 
 public class InputReader {
     public int A, B, N;
@@ -14,7 +18,7 @@ public class InputReader {
     public List<List<int[]>> puzzlePieces;
     public char[] ids;
 
-    private List<String> rawBoardLines;
+    private final List<String> rawBoardLines;
     public GameEnums.GoalPlacement goalPlacement;
     public int goalIndex;
     private boolean isGoalFound;
@@ -219,26 +223,22 @@ public class InputReader {
 
         boolean isAligned = true;
         switch (goalPlacement) {
-            case LEFT:
-            case RIGHT:
-                // System.err.println("Goal Placement: " + goalPlacement + ", Index: " + goalIndex);
+            case LEFT, RIGHT -> {
                 for (int[] coord : primaryCoords) {
                     if (coord[1] != goalIndex) {
                         isAligned = false;
                         break;
                     }
                 }
-                break;
-            case TOP:
-            case BOTTOM:
-                // System.err.println("Goal Placement: " + goalPlacement + ", Index: " + goalIndex);
+            }
+            case TOP, BOTTOM -> {
                 for (int[] coord : primaryCoords) {
                     if (coord[0] != goalIndex) {
                         isAligned = false;
                         break;
                     }
                 }
-                break;
+            }
         }
 
         if (!isAligned) {
