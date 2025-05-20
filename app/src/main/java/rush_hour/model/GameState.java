@@ -113,4 +113,13 @@ public class GameState {
     public GameBoard getBoard() {
         return board;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(moveDescription);
+        sb.append('\n');
+        sb.append(board.toString());
+        return sb.toString();
+    }
 }

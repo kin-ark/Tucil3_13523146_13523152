@@ -34,6 +34,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import rush_hour.io.InputReader;
+import rush_hour.io.OutputHandler;
 import rush_hour.model.GameBoard;
 import rush_hour.model.GamePiece;
 import rush_hour.model.GameState;
@@ -451,6 +452,20 @@ public class GameSolverGUI extends Application {
             nodesExplored = 0;
         });
 
+        Button saveButton = new Button("🖫 Save");
+        styleButton(saveButton);
+        saveButton.setOnAction(e -> {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Save Solution Path");
+            fileChooser.setInitialFileName("solution.txt");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+
+            File selectedFile = fileChooser.showSaveDialog(primaryStage);
+            if (selectedFile != null) {
+                OutputHandler.saveSolutionPath(solutionPath, selectedFile.getAbsolutePath());
+            }
+        });
+
         HBox navigationBox = new HBox(10, prevButton, playPauseButton, nextButton);
         navigationBox.setAlignment(Pos.CENTER);
 
@@ -458,6 +473,7 @@ public class GameSolverGUI extends Application {
             new VBox(5, speedLabel, speedSlider),
             new VBox(5, stepIndicator, moveDescriptionLabel),
             navigationBox, 
+            saveButton,
             resetButton, 
             backButton
         );
