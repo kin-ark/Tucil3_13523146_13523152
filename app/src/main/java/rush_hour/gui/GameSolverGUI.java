@@ -69,8 +69,8 @@ public class GameSolverGUI extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Rush Hour Solver");
-        primaryStage.setWidth(800);
-        primaryStage.setHeight(600);
+        primaryStage.setWidth(960);
+        primaryStage.setHeight(720);
 
         showMainMenu();
 
