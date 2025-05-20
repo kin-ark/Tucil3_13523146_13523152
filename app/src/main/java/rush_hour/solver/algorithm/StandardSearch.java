@@ -37,7 +37,9 @@ public class StandardSearch implements SearchAlgorithm{
             visited.add(current.getBoard().toString());
 
             if (current.isGoal()) {
-                return reconstructPath(current);
+                GameState lastState = current.lastMove();
+                nodesExplored +=  current.getPrimaryPiece().getPositions().size();
+                return reconstructPath(lastState);
             }
 
             for (GameState neighbor : current.generateSuccessors()) {

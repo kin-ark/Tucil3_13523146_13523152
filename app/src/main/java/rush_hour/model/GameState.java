@@ -19,7 +19,7 @@ public class GameState {
         this.cost = parent == null ? 0 : parent.cost + 1;
     }
 
-    private GamePiece getPrimaryPiece() {
+    public GamePiece getPrimaryPiece() {
         for (GamePiece piece : pieces) {
             if (piece.getId() == 'P') return piece;
         }
@@ -64,6 +64,34 @@ public class GameState {
             }
         }
         return successors;
+    }
+
+    public GameState lastMove() {
+        GamePiece piece = getPrimaryPiece();
+        List<GamePiece> newPieces =  new ArrayList<>(pieces);
+        for (int i = 0; i < pieces.size(); i++) {
+            if (pieces.get(i).getId() == 'P') {
+                newPieces.remove(i);
+                break;
+            }
+        }
+
+        GameBoard newBoard = new GameBoard(
+            board.getGridCopy().length,
+            board.getGridCopy()[0].length,
+            board.getGoalPlacement(),
+            board.getGoalIndex()
+        );
+        newBoard.placePieces(newPieces);
+
+        String direction;
+        if (piece.getOrientation() == GameEnums.Orientation.HORIZONTAL) {
+            direction = ( board.getGoalPlacement() == GameEnums.GoalPlacement.RIGHT ? "Right" : "Left");
+        } else {
+            direction = ( board.getGoalPlacement() == GameEnums.GoalPlacement.BOTTOM ? "Down" : "Up");
+        }
+
+        return new GameState(newBoard, newPieces, this, "Move P " + direction + " " +  piece.getPositions().size() + "x");
     }
 
     public List<GamePiece> getPieces() {
