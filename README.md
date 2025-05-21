@@ -64,7 +64,7 @@ cd Tucil3_13523146_13523152
 ```
 
 ```bash
-# Download the jar file
+# Download the jar file from releases section
 cd downloaded_jar_folder
 
 # Run the jar file
