@@ -1,0 +1,765 @@
+Start
+. . U L L O 
+. . U . . O 
+. . U P P O 
+. . . Y W W 
+Z X X Y . . 
+Z . . Y V V 
+
+------------------------------
+Move U Down
+. . . L L O 
+. . U . . O 
+. . U P P O 
+. . U Y W W 
+Z X X Y . . 
+Z . . Y V V 
+
+------------------------------
+Move Z Up
+. . . L L O 
+. . U . . O 
+. . U P P O 
+Z . U Y W W 
+Z X X Y . . 
+. . . Y V V 
+
+------------------------------
+Move Z Up
+. . . L L O 
+. . U . . O 
+Z . U P P O 
+Z . U Y W W 
+. X X Y . . 
+. . . Y V V 
+
+------------------------------
+Move X Left
+. . . L L O 
+. . U . . O 
+Z . U P P O 
+Z . U Y W W 
+X X . Y . . 
+. . . Y V V 
+
+------------------------------
+Move U Down
+. . . L L O 
+. . . . . O 
+Z . U P P O 
+Z . U Y W W 
+X X U Y . . 
+. . . Y V V 
+
+------------------------------
+Move U Down
+. . . L L O 
+. . . . . O 
+Z . . P P O 
+Z . U Y W W 
+X X U Y . . 
+. . U Y V V 
+
+------------------------------
+Move P Left
+. . . L L O 
+. . . . . O 
+Z . P P . O 
+Z . U Y W W 
+X X U Y . . 
+. . U Y V V 
+
+------------------------------
+Move P Left
+. . . L L O 
+. . . . . O 
+Z P P . . O 
+Z . U Y W W 
+X X U Y . . 
+. . U Y V V 
+
+------------------------------
+Move Z Up
+. . . L L O 
+Z . . . . O 
+Z P P . . O 
+. . U Y W W 
+X X U Y . . 
+. . U Y V V 
+
+------------------------------
+Move Z Up
+Z . . L L O 
+Z . . . . O 
+. P P . . O 
+. . U Y W W 
+X X U Y . . 
+. . U Y V V 
+
+------------------------------
+Move P Left
+Z . . L L O 
+Z . . . . O 
+P P . . . O 
+. . U Y W W 
+X X U Y . . 
+. . U Y V V 
+
+------------------------------
+Move U Up
+Z . . L L O 
+Z . . . . O 
+P P U . . O 
+. . U Y W W 
+X X U Y . . 
+. . . Y V V 
+
+------------------------------
+Move U Up
+Z . . L L O 
+Z . U . . O 
+P P U . . O 
+. . U Y W W 
+X X . Y . . 
+. . . Y V V 
+
+------------------------------
+Move X Right
+Z . . L L O 
+Z . U . . O 
+P P U . . O 
+. . U Y W W 
+. X X Y . . 
+. . . Y V V 
+
+------------------------------
+Move L Left
+Z . L L . O 
+Z . U . . O 
+P P U . . O 
+. . U Y W W 
+. X X Y . . 
+. . . Y V V 
+
+------------------------------
+Move Y Up
+Z . L L . O 
+Z . U . . O 
+P P U Y . O 
+. . U Y W W 
+. X X Y . . 
+. . . . V V 
+
+------------------------------
+Move L Left
+Z L L . . O 
+Z . U . . O 
+P P U Y . O 
+. . U Y W W 
+. X X Y . . 
+. . . . V V 
+
+------------------------------
+Move Y Up
+Z L L . . O 
+Z . U Y . O 
+P P U Y . O 
+. . U Y W W 
+. X X . . . 
+. . . . V V 
+
+------------------------------
+Move X Right
+Z L L . . O 
+Z . U Y . O 
+P P U Y . O 
+. . U Y W W 
+. . X X . . 
+. . . . V V 
+
+------------------------------
+Move X Right
+Z L L . . O 
+Z . U Y . O 
+P P U Y . O 
+. . U Y W W 
+. . . X X . 
+. . . . V V 
+
+------------------------------
+Move U Down
+Z L L . . O 
+Z . . Y . O 
+P P U Y . O 
+. . U Y W W 
+. . U X X . 
+. . . . V V 
+
+------------------------------
+Move U Down
+Z L L . . O 
+Z . . Y . O 
+P P . Y . O 
+. . U Y W W 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move P Right
+Z L L . . O 
+Z . . Y . O 
+. P P Y . O 
+. . U Y W W 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move Z Down
+. L L . . O 
+Z . . Y . O 
+Z P P Y . O 
+. . U Y W W 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move Z Down
+. L L . . O 
+. . . Y . O 
+Z P P Y . O 
+Z . U Y W W 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move Z Down
+. L L . . O 
+. . . Y . O 
+. P P Y . O 
+Z . U Y W W 
+Z . U X X . 
+. . U . V V 
+
+------------------------------
+Move L Left
+L L . . . O 
+. . . Y . O 
+. P P Y . O 
+Z . U Y W W 
+Z . U X X . 
+. . U . V V 
+
+------------------------------
+Move P Left
+L L . . . O 
+. . . Y . O 
+P P . Y . O 
+Z . U Y W W 
+Z . U X X . 
+. . U . V V 
+
+------------------------------
+Move Z Down
+L L . . . O 
+. . . Y . O 
+P P . Y . O 
+. . U Y W W 
+Z . U X X . 
+Z . U . V V 
+
+------------------------------
+Move U Up
+L L . . . O 
+. . . Y . O 
+P P U Y . O 
+. . U Y W W 
+Z . U X X . 
+Z . . . V V 
+
+------------------------------
+Move U Up
+L L . . . O 
+. . U Y . O 
+P P U Y . O 
+. . U Y W W 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move U Up
+L L U . . O 
+. . U Y . O 
+P P U Y . O 
+. . . Y W W 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move Y Up
+L L U Y . O 
+. . U Y . O 
+P P U Y . O 
+. . . . W W 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move W Left
+L L U Y . O 
+. . U Y . O 
+P P U Y . O 
+. . . W W . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move W Left
+L L U Y . O 
+. . U Y . O 
+P P U Y . O 
+. . W W . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move W Left
+L L U Y . O 
+. . U Y . O 
+P P U Y . O 
+. W W . . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move W Left
+L L U Y . O 
+. . U Y . O 
+P P U Y . O 
+W W . . . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move U Down
+L L . Y . O 
+. . U Y . O 
+P P U Y . O 
+W W U . . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move Y Down
+L L . . . O 
+. . U Y . O 
+P P U Y . O 
+W W U Y . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move L Right
+. L L . . O 
+. . U Y . O 
+P P U Y . O 
+W W U Y . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move L Right
+. . L L . O 
+. . U Y . O 
+P P U Y . O 
+W W U Y . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move L Right
+. . . L L O 
+. . U Y . O 
+P P U Y . O 
+W W U Y . . 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move O Down
+. . . L L . 
+. . U Y . O 
+P P U Y . O 
+W W U Y . O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move L Right
+. . . . L L 
+. . U Y . O 
+P P U Y . O 
+W W U Y . O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move U Up
+. . U . L L 
+. . U Y . O 
+P P U Y . O 
+W W . Y . O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move Y Up
+. . U Y L L 
+. . U Y . O 
+P P U Y . O 
+W W . . . O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move W Right
+. . U Y L L 
+. . U Y . O 
+P P U Y . O 
+. W W . . O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move W Right
+. . U Y L L 
+. . U Y . O 
+P P U Y . O 
+. . W W . O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move W Right
+. . U Y L L 
+. . U Y . O 
+P P U Y . O 
+. . . W W O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move U Down
+. . . Y L L 
+. . U Y . O 
+P P U Y . O 
+. . U W W O 
+Z . . X X . 
+Z . . . V V 
+
+------------------------------
+Move U Down
+. . . Y L L 
+. . . Y . O 
+P P U Y . O 
+. . U W W O 
+Z . U X X . 
+Z . . . V V 
+
+------------------------------
+Move Z Up
+. . . Y L L 
+. . . Y . O 
+P P U Y . O 
+Z . U W W O 
+Z . U X X . 
+. . . . V V 
+
+------------------------------
+Move U Down
+. . . Y L L 
+. . . Y . O 
+P P . Y . O 
+Z . U W W O 
+Z . U X X . 
+. . U . V V 
+
+------------------------------
+Move P Right
+. . . Y L L 
+. . . Y . O 
+. P P Y . O 
+Z . U W W O 
+Z . U X X . 
+. . U . V V 
+
+------------------------------
+Move Z Up
+. . . Y L L 
+. . . Y . O 
+Z P P Y . O 
+Z . U W W O 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move Z Up
+. . . Y L L 
+Z . . Y . O 
+Z P P Y . O 
+. . U W W O 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move Z Up
+Z . . Y L L 
+Z . . Y . O 
+. P P Y . O 
+. . U W W O 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move P Left
+Z . . Y L L 
+Z . . Y . O 
+P P . Y . O 
+. . U W W O 
+. . U X X . 
+. . U . V V 
+
+------------------------------
+Move U Up
+Z . . Y L L 
+Z . . Y . O 
+P P U Y . O 
+. . U W W O 
+. . U X X . 
+. . . . V V 
+
+------------------------------
+Move U Up
+Z . . Y L L 
+Z . U Y . O 
+P P U Y . O 
+. . U W W O 
+. . . X X . 
+. . . . V V 
+
+------------------------------
+Move U Up
+Z . U Y L L 
+Z . U Y . O 
+P P U Y . O 
+. . . W W O 
+. . . X X . 
+. . . . V V 
+
+------------------------------
+Move X Left
+Z . U Y L L 
+Z . U Y . O 
+P P U Y . O 
+. . . W W O 
+. . X X . . 
+. . . . V V 
+
+------------------------------
+Move X Left
+Z . U Y L L 
+Z . U Y . O 
+P P U Y . O 
+. . . W W O 
+. X X . . . 
+. . . . V V 
+
+------------------------------
+Move W Left
+Z . U Y L L 
+Z . U Y . O 
+P P U Y . O 
+. . W W . O 
+. X X . . . 
+. . . . V V 
+
+------------------------------
+Move X Left
+Z . U Y L L 
+Z . U Y . O 
+P P U Y . O 
+. . W W . O 
+X X . . . . 
+. . . . V V 
+
+------------------------------
+Move W Left
+Z . U Y L L 
+Z . U Y . O 
+P P U Y . O 
+. W W . . O 
+X X . . . . 
+. . . . V V 
+
+------------------------------
+Move W Left
+Z . U Y L L 
+Z . U Y . O 
+P P U Y . O 
+W W . . . O 
+X X . . . . 
+. . . . V V 
+
+------------------------------
+Move U Down
+Z . . Y L L 
+Z . U Y . O 
+P P U Y . O 
+W W U . . O 
+X X . . . . 
+. . . . V V 
+
+------------------------------
+Move U Down
+Z . . Y L L 
+Z . . Y . O 
+P P U Y . O 
+W W U . . O 
+X X U . . . 
+. . . . V V 
+
+------------------------------
+Move V Left
+Z . . Y L L 
+Z . . Y . O 
+P P U Y . O 
+W W U . . O 
+X X U . . . 
+. . . V V . 
+
+------------------------------
+Move V Left
+Z . . Y L L 
+Z . . Y . O 
+P P U Y . O 
+W W U . . O 
+X X U . . . 
+. . V V . . 
+
+------------------------------
+Move V Left
+Z . . Y L L 
+Z . . Y . O 
+P P U Y . O 
+W W U . . O 
+X X U . . . 
+. V V . . . 
+
+------------------------------
+Move V Left
+Z . . Y L L 
+Z . . Y . O 
+P P U Y . O 
+W W U . . O 
+X X U . . . 
+V V . . . . 
+
+------------------------------
+Move Y Down
+Z . . . L L 
+Z . . Y . O 
+P P U Y . O 
+W W U Y . O 
+X X U . . . 
+V V . . . . 
+
+------------------------------
+Move U Down
+Z . . . L L 
+Z . . Y . O 
+P P . Y . O 
+W W U Y . O 
+X X U . . . 
+V V U . . . 
+
+------------------------------
+Move P Right
+Z . . . L L 
+Z . . Y . O 
+. P P Y . O 
+W W U Y . O 
+X X U . . . 
+V V U . . . 
+
+------------------------------
+Move O Down
+Z . . . L L 
+Z . . Y . . 
+. P P Y . O 
+W W U Y . O 
+X X U . . O 
+V V U . . . 
+
+------------------------------
+Move Y Down
+Z . . . L L 
+Z . . . . . 
+. P P Y . O 
+W W U Y . O 
+X X U Y . O 
+V V U . . . 
+
+------------------------------
+Move Y Down
+Z . . . L L 
+Z . . . . . 
+. P P . . O 
+W W U Y . O 
+X X U Y . O 
+V V U Y . . 
+
+------------------------------
+Move P Right
+Z . . . L L 
+Z . . . . . 
+. . P P . O 
+W W U Y . O 
+X X U Y . O 
+V V U Y . . 
+
+------------------------------
+Move O Down
+Z . . . L L 
+Z . . . . . 
+. . P P . . 
+W W U Y . O 
+X X U Y . O 
+V V U Y . O 
+
+------------------------------
+Move P Right
+Z . . . L L 
+Z . . . . . 
+. . . P P . 
+W W U Y . O 
+X X U Y . O 
+V V U Y . O 
+
+------------------------------
+Move P Right
+Z . . . L L 
+Z . . . . . 
+. . . . P P 
+W W U Y . O 
+X X U Y . O 
+V V U Y . O 
+
+------------------------------
+Move P Right 2x
+Z . . . L L 
+Z . . . . . 
+. . . . . . 
+W W U Y . O 
+X X U Y . O 
+V V U Y . O 
+
+------------------------------

@@ -1,0 +1,927 @@
+Start
+A A B . . F 
+. . B C D F 
+G P P C D F 
+G H . I I I 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move C Up
+A A B C . F 
+. . B C D F 
+G P P . D F 
+G H . I I I 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move D Up
+A A B C D F 
+. . B C D F 
+G P P . . F 
+G H . I I I 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move P Right
+A A B C D F 
+. . B C D F 
+G . P P . F 
+G H . I I I 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move P Right
+A A B C D F 
+. . B C D F 
+G . . P P F 
+G H . I I I 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+A A B C D F 
+. . B C D F 
+G . . P P F 
+G H . I I I 
+G H J . . . 
+L L J . M M 
+
+------------------------------
+Move H Up
+A A B C D F 
+. . B C D F 
+G H . P P F 
+G H . I I I 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+A A B C D F 
+. . B C D F 
+G H . P P F 
+G H . I I I 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move J Up
+A A B C D F 
+. . B C D F 
+G H . P P F 
+G H J I I I 
+G . J . . . 
+L L . M M . 
+
+------------------------------
+Move M Right
+A A B C D F 
+. . B C D F 
+G H . P P F 
+G H J I I I 
+G . J . . . 
+L L . . M M 
+
+------------------------------
+Move L Right
+A A B C D F 
+. . B C D F 
+G H . P P F 
+G H J I I I 
+G . J . . . 
+. L L . M M 
+
+------------------------------
+Move M Left
+A A B C D F 
+. . B C D F 
+G H . P P F 
+G H J I I I 
+G . J . . . 
+. L L M M . 
+
+------------------------------
+Move J Up
+A A B C D F 
+. . B C D F 
+G H J P P F 
+G H J I I I 
+G . . . . . 
+. L L M M . 
+
+------------------------------
+Move H Down
+A A B C D F 
+. . B C D F 
+G . J P P F 
+G H J I I I 
+G H . . . . 
+. L L M M . 
+
+------------------------------
+Move G Down
+A A B C D F 
+. . B C D F 
+. . J P P F 
+G H J I I I 
+G H . . . . 
+G L L M M . 
+
+------------------------------
+Move M Right
+A A B C D F 
+. . B C D F 
+. . J P P F 
+G H J I I I 
+G H . . . . 
+G L L . M M 
+
+------------------------------
+Move L Right
+A A B C D F 
+. . B C D F 
+. . J P P F 
+G H J I I I 
+G H . . . . 
+G . L L M M 
+
+------------------------------
+Move J Down
+A A B C D F 
+. . B C D F 
+. . . P P F 
+G H J I I I 
+G H J . . . 
+G . L L M M 
+
+------------------------------
+Move H Down
+A A B C D F 
+. . B C D F 
+. . . P P F 
+G . J I I I 
+G H J . . . 
+G H L L M M 
+
+------------------------------
+Move B Down
+A A . C D F 
+. . B C D F 
+. . B P P F 
+G . J I I I 
+G H J . . . 
+G H L L M M 
+
+------------------------------
+Move H Up
+A A . C D F 
+. . B C D F 
+. . B P P F 
+G H J I I I 
+G H J . . . 
+G . L L M M 
+
+------------------------------
+Move L Left
+A A . C D F 
+. . B C D F 
+. . B P P F 
+G H J I I I 
+G H J . . . 
+G L L . M M 
+
+------------------------------
+Move M Left
+A A . C D F 
+. . B C D F 
+. . B P P F 
+G H J I I I 
+G H J . . . 
+G L L M M . 
+
+------------------------------
+Move H Up
+A A . C D F 
+. . B C D F 
+. H B P P F 
+G H J I I I 
+G . J . . . 
+G L L M M . 
+
+------------------------------
+Move M Right
+A A . C D F 
+. . B C D F 
+. H B P P F 
+G H J I I I 
+G . J . . . 
+G L L . M M 
+
+------------------------------
+Move L Right
+A A . C D F 
+. . B C D F 
+. H B P P F 
+G H J I I I 
+G . J . . . 
+G . L L M M 
+
+------------------------------
+Move H Up
+A A . C D F 
+. H B C D F 
+. H B P P F 
+G . J I I I 
+G . J . . . 
+G . L L M M 
+
+------------------------------
+Move G Up
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+. . L L M M 
+
+------------------------------
+Move L Left
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+. L L . M M 
+
+------------------------------
+Move M Left
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+. L L M M . 
+
+------------------------------
+Move L Left
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+L L . M M . 
+
+------------------------------
+Move M Right
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+L L . . M M 
+
+------------------------------
+Move J Down
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . . I I I 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . . I I I 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move I Left
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . I I I . 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G . I I I . 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move I Left
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G I I I . . 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+A A . C D F 
+. H B C D F 
+G H B P P F 
+G I I I . . 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move G Up
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G I I I . . 
+. . J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G I I I . . 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move I Right
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G . I I I . 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move I Right
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G . . I I I 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G . . I I I 
+. . J . . . 
+L L J M M . 
+
+------------------------------
+Move J Up
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+L L . M M . 
+
+------------------------------
+Move M Right
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+L L . . M M 
+
+------------------------------
+Move L Right
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+. L L . M M 
+
+------------------------------
+Move M Left
+A A . C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+. L L M M . 
+
+------------------------------
+Move H Down
+A A . C D F 
+G . B C D F 
+G H B P P F 
+G H J I I I 
+. . J . . . 
+. L L M M . 
+
+------------------------------
+Move M Right
+A A . C D F 
+G . B C D F 
+G H B P P F 
+G H J I I I 
+. . J . . . 
+. L L . M M 
+
+------------------------------
+Move L Right
+A A . C D F 
+G . B C D F 
+G H B P P F 
+G H J I I I 
+. . J . . . 
+. . L L M M 
+
+------------------------------
+Move H Down
+A A . C D F 
+G . B C D F 
+G . B P P F 
+G H J I I I 
+. H J . . . 
+. . L L M M 
+
+------------------------------
+Move L Left
+A A . C D F 
+G . B C D F 
+G . B P P F 
+G H J I I I 
+. H J . . . 
+. L L . M M 
+
+------------------------------
+Move A Right
+. A A C D F 
+G . B C D F 
+G . B P P F 
+G H J I I I 
+. H J . . . 
+. L L . M M 
+
+------------------------------
+Move M Left
+. A A C D F 
+G . B C D F 
+G . B P P F 
+G H J I I I 
+. H J . . . 
+. L L M M . 
+
+------------------------------
+Move L Left
+. A A C D F 
+G . B C D F 
+G . B P P F 
+G H J I I I 
+. H J . . . 
+L L . M M . 
+
+------------------------------
+Move M Right
+. A A C D F 
+G . B C D F 
+G . B P P F 
+G H J I I I 
+. H J . . . 
+L L . . M M 
+
+------------------------------
+Move J Down
+. A A C D F 
+G . B C D F 
+G . B P P F 
+G H . I I I 
+. H J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+. A A C D F 
+G . B C D F 
+G . B P P F 
+G H . I I I 
+. H J . . . 
+L L J M M . 
+
+------------------------------
+Move H Up
+. A A C D F 
+G . B C D F 
+G H B P P F 
+G H . I I I 
+. . J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+. A A C D F 
+G . B C D F 
+G H B P P F 
+G H . I I I 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move J Up
+. A A C D F 
+G . B C D F 
+G H B P P F 
+G H J I I I 
+. . J . . . 
+L L . . M M 
+
+------------------------------
+Move M Left
+. A A C D F 
+G . B C D F 
+G H B P P F 
+G H J I I I 
+. . J . . . 
+L L . M M . 
+
+------------------------------
+Move H Up
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+L L . M M . 
+
+------------------------------
+Move M Right
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+L L . . M M 
+
+------------------------------
+Move L Right
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+. L L . M M 
+
+------------------------------
+Move M Left
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+. L L M M . 
+
+------------------------------
+Move G Down
+. A A C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+. L L M M . 
+
+------------------------------
+Move M Right
+. A A C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+. L L . M M 
+
+------------------------------
+Move L Right
+. A A C D F 
+. H B C D F 
+G H B P P F 
+G . J I I I 
+G . J . . . 
+. . L L M M 
+
+------------------------------
+Move G Up
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G . J I I I 
+. . J . . . 
+. . L L M M 
+
+------------------------------
+Move G Up
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . J I I I 
+. . J . . . 
+. . L L M M 
+
+------------------------------
+Move L Left
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . J I I I 
+. . J . . . 
+. L L . M M 
+
+------------------------------
+Move M Left
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . J I I I 
+. . J . . . 
+. L L M M . 
+
+------------------------------
+Move L Left
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . J I I I 
+. . J . . . 
+L L . M M . 
+
+------------------------------
+Move M Right
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . J I I I 
+. . J . . . 
+L L . . M M 
+
+------------------------------
+Move J Down
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . . I I I 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . . I I I 
+. . J . . . 
+L L J M M . 
+
+------------------------------
+Move I Left
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . I I I . 
+. . J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. . I I I . 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move I Left
+G A A C D F 
+G H B C D F 
+G H B P P F 
+. I I I . . 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move G Down
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G I I I . . 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G I I I . . 
+. . J . . . 
+L L J M M . 
+
+------------------------------
+Move I Right
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G . I I I . 
+. . J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+. A A C D F 
+G H B C D F 
+G H B P P F 
+G . I I I . 
+. . J . . . 
+L L J . M M 
+
+------------------------------
+Move G Down
+. A A C D F 
+. H B C D F 
+G H B P P F 
+G . I I I . 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+. A A C D F 
+. H B C D F 
+G H B P P F 
+G . I I I . 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move I Left
+. A A C D F 
+. H B C D F 
+G H B P P F 
+G I I I . . 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+. A A C D F 
+. H B C D F 
+G H B P P F 
+G I I I . . 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move F Down
+. A A C D . 
+. H B C D F 
+G H B P P F 
+G I I I . F 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+. A A C D . 
+. H B C D F 
+G H B P P F 
+G I I I . F 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move I Right
+. A A C D . 
+. H B C D F 
+G H B P P F 
+G . I I I F 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+. A A C D . 
+. H B C D F 
+G H B P P F 
+G . I I I F 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move H Down
+. A A C D . 
+. . B C D F 
+G H B P P F 
+G H I I I F 
+G . J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+. A A C D . 
+. . B C D F 
+G H B P P F 
+G H I I I F 
+G . J . . . 
+L L J M M . 
+
+------------------------------
+Move H Down
+. A A C D . 
+. . B C D F 
+G . B P P F 
+G H I I I F 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move M Right
+. A A C D . 
+. . B C D F 
+G . B P P F 
+G H I I I F 
+G H J . . . 
+L L J . M M 
+
+------------------------------
+Move G Up
+. A A C D . 
+G . B C D F 
+G . B P P F 
+G H I I I F 
+. H J . . . 
+L L J . M M 
+
+------------------------------
+Move M Left
+. A A C D . 
+G . B C D F 
+G . B P P F 
+G H I I I F 
+. H J . . . 
+L L J M M . 
+
+------------------------------
+Move G Up
+G A A C D . 
+G . B C D F 
+G . B P P F 
+. H I I I F 
+. H J . . . 
+L L J M M . 
+
+------------------------------
+Move F Down
+G A A C D . 
+G . B C D . 
+G . B P P F 
+. H I I I F 
+. H J . . F 
+L L J M M . 
+
+------------------------------
+Move F Down
+G A A C D . 
+G . B C D . 
+G . B P P . 
+. H I I I F 
+. H J . . F 
+L L J M M F 
+
+------------------------------
+Move P Right
+G A A C D . 
+G . B C D . 
+G . B . P P 
+. H I I I F 
+. H J . . F 
+L L J M M F 
+
+------------------------------
+Move P Right 2x
+G A A C D . 
+G . B C D . 
+G . B . . . 
+. H I I I F 
+. H J . . F 
+L L J M M F 
+
+------------------------------

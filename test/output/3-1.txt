@@ -1,0 +1,160 @@
+Start
+. . A A A B B B B 
+. . . . . . . C C 
+D . . . E . . F F 
+D . . . E . G G G 
+D . . H I I J J J 
+L M . H . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move A Left
+. A A A . B B B B 
+. . . . . . . C C 
+D . . . E . . F F 
+D . . . E . G G G 
+D . . H I I J J J 
+L M . H . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move B Left
+. A A A B B B B . 
+. . . . . . . C C 
+D . . . E . . F F 
+D . . . E . G G G 
+D . . H I I J J J 
+L M . H . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move G Left
+. A A A B B B B . 
+. . . . . . . C C 
+D . . . E . . F F 
+D . . . E G G G . 
+D . . H I I J J J 
+L M . H . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move H Up
+. A A A B B B B . 
+. . . . . . . C C 
+D . . . E . . F F 
+D . . H E G G G . 
+D . . H I I J J J 
+L M . . . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move H Up
+. A A A B B B B . 
+. . . . . . . C C 
+D . . H E . . F F 
+D . . H E G G G . 
+D . . . I I J J J 
+L M . . . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move I Left
+. A A A B B B B . 
+. . . . . . . C C 
+D . . H E . . F F 
+D . . H E G G G . 
+D . . I I . J J J 
+L M . . . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move J Left
+. A A A B B B B . 
+. . . . . . . C C 
+D . . H E . . F F 
+D . . H E G G G . 
+D . . I I J J J . 
+L M . . . . N O P 
+L M Q Q Q Q N O P 
+
+------------------------------
+Move P Up
+. A A A B B B B . 
+. . . . . . . C C 
+D . . H E . . F F 
+D . . H E G G G . 
+D . . I I J J J P 
+L M . . . . N O P 
+L M Q Q Q Q N O . 
+
+------------------------------
+Move F Left
+. A A A B B B B . 
+. . . . . . . C C 
+D . . H E . F F . 
+D . . H E G G G . 
+D . . I I J J J P 
+L M . . . . N O P 
+L M Q Q Q Q N O . 
+
+------------------------------
+Move C Left
+. A A A B B B B . 
+. . . . . . C C . 
+D . . H E . F F . 
+D . . H E G G G . 
+D . . I I J J J P 
+L M . . . . N O P 
+L M Q Q Q Q N O . 
+
+------------------------------
+Move P Up
+. A A A B B B B . 
+. . . . . . C C . 
+D . . H E . F F . 
+D . . H E G G G P 
+D . . I I J J J P 
+L M . . . . N O . 
+L M Q Q Q Q N O . 
+
+------------------------------
+Move P Up
+. A A A B B B B . 
+. . . . . . C C . 
+D . . H E . F F P 
+D . . H E G G G P 
+D . . I I J J J . 
+L M . . . . N O . 
+L M Q Q Q Q N O . 
+
+------------------------------
+Move P Up
+. A A A B B B B . 
+. . . . . . C C P 
+D . . H E . F F P 
+D . . H E G G G . 
+D . . I I J J J . 
+L M . . . . N O . 
+L M Q Q Q Q N O . 
+
+------------------------------
+Move P Up
+. A A A B B B B P 
+. . . . . . C C P 
+D . . H E . F F . 
+D . . H E G G G . 
+D . . I I J J J . 
+L M . . . . N O . 
+L M Q Q Q Q N O . 
+
+------------------------------
+Move P Up 2x
+. A A A B B B B . 
+. . . . . . C C . 
+D . . H E . F F . 
+D . . H E G G G . 
+D . . I I J J J . 
+L M . . . . N O . 
+L M Q Q Q Q N O . 
+
+------------------------------

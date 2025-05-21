@@ -1,0 +1,99 @@
+Start
+A A B . . F 
+. . B C D F 
+G P P C D F 
+G H . I I I 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move C Up
+A A B C . F 
+. . B C D F 
+G P P . D F 
+G H . I I I 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move I Left
+A A B C . F 
+. . B C D F 
+G P P . D F 
+G H I I I . 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move F Down
+A A B C . . 
+. . B C D F 
+G P P . D F 
+G H I I I F 
+G H J . . . 
+L L J M M . 
+
+------------------------------
+Move F Down
+A A B C . . 
+. . B C D . 
+G P P . D F 
+G H I I I F 
+G H J . . F 
+L L J M M . 
+
+------------------------------
+Move F Down
+A A B C . . 
+. . B C D . 
+G P P . D . 
+G H I I I F 
+G H J . . F 
+L L J M M F 
+
+------------------------------
+Move D Up
+A A B C D . 
+. . B C D . 
+G P P . . . 
+G H I I I F 
+G H J . . F 
+L L J M M F 
+
+------------------------------
+Move P Right
+A A B C D . 
+. . B C D . 
+G . P P . . 
+G H I I I F 
+G H J . . F 
+L L J M M F 
+
+------------------------------
+Move P Right
+A A B C D . 
+. . B C D . 
+G . . P P . 
+G H I I I F 
+G H J . . F 
+L L J M M F 
+
+------------------------------
+Move P Right
+A A B C D . 
+. . B C D . 
+G . . . P P 
+G H I I I F 
+G H J . . F 
+L L J M M F 
+
+------------------------------
+Move P Right 2x
+A A B C D . 
+. . B C D . 
+G . . . . . 
+G H I I I F 
+G H J . . F 
+L L J M M F 
+
+------------------------------
