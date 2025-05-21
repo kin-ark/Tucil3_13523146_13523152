@@ -80,6 +80,7 @@ java -jar RushHourSolver.jar
   - UCS: Uniform Cost Search (guarantees optimal solution)
   - Greedy Best First: Faster but may not be optimal
   - A*: Balance between speed and optimality
+  - IDA*: DFS + A*
 
 2. Select a Heuristic (for Greedy and A*):
   - Distance: Estimates based on primary car's distance to exit
